@@ -31,3 +31,37 @@ function renderLandingScreen() {
             showQuestion("mood");
         });
 }
+
+function showQuestion(questionId) {
+
+    const question = QUESTIONS[questionId];
+
+    let buttons = "";
+
+    question.options.forEach(option => {
+
+        buttons += `
+            <button class="answer-button">
+                ${option.text}
+            </button>
+        `;
+
+    });
+
+    app.innerHTML = `
+        <section class="screen active">
+
+            <div class="card">
+
+                <h2>${question.question}</h2>
+
+                ${buttons}
+
+            </div>
+
+        </section>
+    `;
+
+}
+
+renderLandingScreen();
