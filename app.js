@@ -1,13 +1,33 @@
+// Grab the empty stage
 const app = document.getElementById("app");
-console.log(app);
+
+// Keep track of where we are
 let currentScreen = "landing";
 
-function showScreen(screenName) {
-    currentScreen = screenName;
-    console.log("Current screen:", currentScreen);
-}
+// Draw the landing page
+function renderLandingScreen() {
 
-const startButton = document.getElementById("start-button");
-startButton.addEventListener("click", () => {
-    showScreen("question");
-});
+    app.innerHTML = `
+        <section class="screen active">
+            <div class="card">
+                <h1>🎬 Roll Credits 🎬</h1>
+                <p class="tagline">
+                    Finding the perfect movie shouldn't feel like scrolling forever.
+                </p>
+                <p class="description">
+                    Answer a few questions and discover your next favorite movie.
+                </p>
+                <button id="start-button">
+
+                    Find My Film
+
+                </button>
+            </div>
+        </section>
+    `;
+    document
+        .getElementById("start-button")
+        .addEventListener("click", () => {
+            showQuestion("mood");
+        });
+}
