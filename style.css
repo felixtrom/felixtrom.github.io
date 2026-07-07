@@ -9,10 +9,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background:
-        radial-gradient(circle at top,
-            #1d2d50,
-            #0f172a 45%,
-            #050608);
+    radial-gradient(
+        circle at top,
+        #2d3f63 0%,
+        #1c2541 30%,
+        #121826 65%,
+        #090b10 100%
+    );
     color: white;
     min-height: 100vh;
     display: flex;
@@ -36,6 +39,9 @@ body {
 
 /* ---------- CARD ---------- */
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 24px;
@@ -64,6 +70,8 @@ h1 {
 }
 
 .description {
+    max-width:500px;
+    text-align:center;
     color: #9ca3af;
     line-height: 1.7;
     margin-bottom: 2.5rem;
@@ -71,17 +79,20 @@ h1 {
 
 /* ---------- BUTTON ---------- */
 button {
-    background: white;
-    color: black;
+    background: #00c030;
+    color: white;
     border: none;
     border-radius: 999px;
-    padding: 1rem 2.5rem;
+    padding: 1rem 2.75rem;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     transition: all .25s ease;
 }
 
-button:hover {
-    transform: translateY(-3px);
-    transform: scale(1.03);
+button:hover{
+    background:#18d24b;
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:
+        0 0 30px rgba(0,192,48,.35);
 }
