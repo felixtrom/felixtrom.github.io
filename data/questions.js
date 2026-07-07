@@ -1,31 +1,24 @@
 const QUESTIONS = {
-    welcome: {
-        type: "welcome",
-        next: "mood"
-    },
-
     mood: {
+        id: "mood",
         question: "How do you want to feel tonight?",
         options: [
             {
                 text: "😊 Something Light",
-                next: "light"
+                next: "placeholder"
             },
-
             {
                 text: "❤️ Something Romantic",
-                next: "romantic"
+                next: "placeholder"
             },
-
             {
                 text: "🧠 Something Thought-Provoking",
-                next: "thoughtful"
+                next: "placeholder"
             },
-
             {
                 text: "🌍 Something Different",
-                next: "different"
+                next: "placeholder"
             }
         ]
     }
-}
+};
