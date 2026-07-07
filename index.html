@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonight's Pick</title>
 
-<title>Roll Credits</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <main id="app">
 
-    <h1>🎬 Roll Credits 🎬</h1>
+        <section class="screen active" id="landing-screen">
 
-    <p id="subtitle">
-        Find your film for the night <3
-    </p>
+            <div class="card">
 
-    <div id="app"></div>
+                <div class="popcorn">🍿</div>
 
-</div>
+                <h1>🎬 Roll Credits 🎬</h1>
 
-<script src="data.js"></script>
-<script src="script.js"></script>
+                <p class="tagline">
+                    Finding the perfect movie shouldn't take longer than watching one.
+                </p>
+
+                <p class="description">
+                    Answer a few questions and I'll recommend something you'll actually want to watch.
+                </p>
+
+                <button id="start-button">
+                    Let's Begin
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="data/questions.js"></script>
+    <script src="data/movies.js"></script>
+    <script src="app.js"></script>
 
 </body>
+
 </html>
